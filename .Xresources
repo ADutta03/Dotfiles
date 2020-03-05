@@ -1,13 +1,8 @@
-! URxvt
-URxvt*termName: urxvt
-URxvt*cursorBlink: true
-URxvt*urlLauncher: google-chrome-stable
-URxvt*borderless: 1
-URxvt*perl-ext-common: default,matcher
-URxvt*matcher.button: 1
-URxvt*foreground: #ffffff
-!URxvt*background: rgba:0000/0000/0000/4444
-URxvt*font: xft:Input Mono:size=10:style=Bold, \
-            xft:Kochi Gothic:antialias=false
-URxvt*depth: 32
-URxvt*scrollBar: false
+URxvt.font: xft:Source Code Pro:size=10
+URxvt.letterSpace: 1
+URxvt.cursorBlink: false
+URxvt.foreground: #FFFFFF
+URxvt.background: #000000
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.fading: 30
