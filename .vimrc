@@ -56,13 +56,13 @@ set wildmenu
 " display line numbering
 set number
 " display relative line numbering
-set relativenumber
-" set the window title, reflecting the file currently being edited
-set title
+"set relativenumber
 " highlight matching braces
 set showmatch
 " use colors that suit a dark background
 set background=dark
+" display ruler
+set ruler
 
 " miscellaneous options
 
@@ -70,8 +70,6 @@ set background=dark
 set nocompatible
 " display a confirmation dialog when closing an unsaved file
 set confirm
-" enable spellchecking
-set spell
 " ignore file's mode lines and use vimrc configs instead
 set nomodeline
 " increase the undo limit

@@ -1,4 +1,4 @@
-URxvt.font: xft:Source Code Pro:size=10
+URxvt.font: xft:Source Code Pro:size=9
 URxvt.letterSpace: 1
 URxvt.cursorBlink: false
 URxvt.foreground: #FFFFFF
@@ -6,3 +6,13 @@ URxvt.background: #000000
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.fading: 30
+URxvt.perl-ext-common: default,selection-to-clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+Urxvt.keysym.Control-Meta-c: builtin-string:
+Urxvt.keysym.Control-Meta-v: builtin-string:
+URxvt.iso14755: false
+URxvt.keysym.Control-Up:     \033[1;5A
+URxvt.keysym.Control-Down:   \033[1;5B
+URxvt.keysym.Control-Left:   \033[1;5D
+URxvt.keysym.Control-Right:  \033[1;5C

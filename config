@@ -30,7 +30,7 @@ alert = #bd2c40
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 23
+height = 13
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -52,13 +52,13 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Source Code Pro:pixelsize=10;1
+font-0 = Source Code Pro:pixelsize=9;1
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
 
-modules-left = time date pulseaudio spotify 
+modules-left = time date battery pulseaudio
 modules-center = i3
-modules-right = filesystem cpu memory battery wlan arch
+modules-right = filesystem cpu memory wlan arch
 
 tray-position = right
 tray-padding = 2
@@ -127,11 +127,11 @@ label-urgent-padding = 2
 ; Separator in between workspaces
 ;label-separator = |
 
-[module/spotify]
-type = custom/script
-interval = 1
-format = <label>
-exec = python ~/.config/polybar/spotify_status.py -t 42 -f '{song} | {artist}'
+;[module/spotify]
+;type = custom/script
+;interval = 1
+;format = <label>
+;exec = python ~/.config/polybar/spotify_status.py -t 42 -f '{song} | {artist}'
 
 [module/cpu]
 type = internal/cpu
@@ -149,21 +149,20 @@ interface = wlp3s0
 interval = 3.0
 
 ; vim:ft=dosini
-label-connected = %essid%
+label-connected = WLAN: %essid%
 
-format-disconnected = N/A
+format-disconnected = WLAN: -
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
-date = "%Y-%m-%d"
+date = %Y-%m-%d
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = %H:%M:%S
 
 label = %date% %time%
 
@@ -173,7 +172,7 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 label-volume = VOL: %percentage%%
 
-label-muted = Muted
+label-muted = VOL: Muted
 
 [module/battery]
 type = internal/battery
@@ -189,7 +188,7 @@ format-discharging = BAT: <label-discharging>
 
 [module/arch]
 type = custom/text
-content = "i use arch btw"
+content = "I use Arch btw"
 
 [settings]
 screenchange-reload = true
